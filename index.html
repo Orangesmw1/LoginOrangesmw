@@ -27,11 +27,15 @@
             <h4>Fill out the form below to login</h4>
             <div class="input_user-name">
                 <div class="block_user-name">
-                    <input type="text" placeholder="User Name" id="inputUserNameLogin">
+                    <input type="text" id="inputUserNameLogin" required> 
+                    <label for="">User Name</label>
+
                     <i class="fa fa-user-circle"></i>
                 </div>
                 <div class="block_user-password">
-                    <input type="password" placeholder="Password" id="inputPasswordLogin">
+                    <input type="password" id="inputPasswordLogin" required>
+                    <label for="">Password</label>
+                    <span id="block-eyes"><i onclick="eyesShowPassword()" class="fa fa-eye-slash showPassword"></i> <i onclick="eyesHidePassword()" class="fa fa-eye hidePassword"></i></span>
                     <i class="fa fa-lock"></i>
                 </div>
             </div>

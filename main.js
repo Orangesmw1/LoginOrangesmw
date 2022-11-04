@@ -2,6 +2,9 @@ listRegisterAccount = JSON.parse(localStorage.getItem("listRegisterAccount"));
 
 var inputUserNameLogin = document.querySelector("#inputUserNameLogin");
 var inputPasswordLogin = document.querySelector("#inputPasswordLogin");
+var showPassword = document.querySelector(".showPassword")
+var hidePassword = document.querySelector(".hidePassword");
+var blockEyes = document.querySelector("#block-eyes");
 
 function login() {
     listRegisterAccount = JSON.parse(localStorage.getItem("listRegisterAccount"));
@@ -24,6 +27,34 @@ function login() {
     }
 }
 
-function switchRegisterPage() {
-    window.location = "../index2.html";
+hidePassword.style = `
+    display: none;
+
+`
+
+function eyesShowPassword() {
+    if(inputPasswordLogin.type === "password") {
+        inputPasswordLogin.type = "text";
+
+        hidePassword.style = `
+            display: block;
+        `
+        showPassword.style = `
+            display: none;
+        `
+    } 
 }
+
+function eyesHidePassword() {
+    if(inputPasswordLogin.type === "text") {
+        inputPasswordLogin.type = "password";
+        hidePassword.style = `
+            display: none; 
+        `
+        showPassword.style = `
+            display: block;
+        `
+    }
+}
+
+

@@ -100,16 +100,23 @@ section {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    position: relative;
 }
 
 .block_user-name input {
     width: 88%;
     background-color: rgba(0, 0, 0, 0.505);
     border: none !important;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+
     padding-left: 20px;
     transition: all ease-in-out 0.2s;
     color: #fff;
+
+    z-index: 100;
+    font-family: 'Josefin Slab', serif;
+
 
 }
 
@@ -121,6 +128,34 @@ section {
 
 .block_user-name input:focus-visible {
     outline:rgb(244, 160, 129) solid 3.5px;
+}
+
+.block_user-name label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 100;
+    
+    font-size: 1.3rem;
+    color: rgb(182, 178, 178);
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: transparent;
+
+    transition: all linear 0.2s;
+    pointer-events: none;
+}
+
+.block_user-name input:focus + label, .block_user-name input:valid + label {
+    top: -15px;
+    left: 20px;
+    background-color: #fff;
+    color: rgb(244, 160, 129);
+    font-size: 1rem;
+    padding: 0px 6px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 
@@ -139,21 +174,51 @@ section {
 }
  
 .block_user-password {
-    margin-top: 20px;
+    margin-top: 25px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    
 }
 
 .block_user-password input {
     width: 88%;
     background-color: rgba(0, 0, 0, 0.505);
     border: none !important;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding-left: 20px;
     transition: all ease-in-out 0.2s;
     color: #fff;
 
+}
+
+.block_user-password label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 100;
+    
+    font-size: 1.3rem;
+    color: rgb(182, 178, 178);
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: transparent;
+
+    transition: all linear 0.2s;
+    pointer-events: none;
+}
+
+.block_user-password input:focus + label, .block_user-password input:valid + label {
+    top: -15px;
+    left: 20px;
+    background-color: #fff;
+    color: rgb(244, 160, 129);
+    font-size: 1rem;
+    padding: 0px 6px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .block_user-password input::placeholder {
@@ -164,6 +229,22 @@ section {
 
 .block_user-password input:focus-visible {
     outline:rgb(244, 160, 129) solid 3.5px;
+}
+
+.block_user-password span {
+    position: absolute;
+    right: 15%;
+    top: 25%;
+
+
+}
+
+.block_user-password span i {
+    font-size: 1rem;
+}
+
+.block_user-password span i:hover {
+    cursor: pointer;
 }
 
 .block_user-password i {
