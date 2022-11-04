@@ -6,6 +6,10 @@ var showPassword = document.querySelector(".showPassword")
 var hidePassword = document.querySelector(".hidePassword");
 var blockEyes = document.querySelector("#block-eyes");
 
+
+var enterBtn = document.querySelector("#enter-btn");
+
+
 function login() {
     listRegisterAccount = JSON.parse(localStorage.getItem("listRegisterAccount"));
 
@@ -24,6 +28,10 @@ function login() {
                 alert("Wrong Password");
             }
         } 
+    }
+
+    if(userNameLogin == "" || userPassLogin == "" ){
+        alert("Fill in information");
     }
 }
 
@@ -56,5 +64,21 @@ function eyesHidePassword() {
         `
     }
 }
+
+
+inputUserNameLogin.addEventListener("keypress",function(event) {
+    if(event.key === "Enter") {
+        event.preventDefault();
+        enterBtn.click();
+    }
+})
+
+
+inputPasswordLogin.addEventListener("keypress",function(event) {
+    if(event.key === "Enter") {
+        event.preventDefault();
+        enterBtn.click();
+    }
+})
 
 
