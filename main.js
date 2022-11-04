@@ -16,7 +16,7 @@ function login() {
             alert("Account does not exist. Please register");
         } else if(userNameLogin === objUserLogin.getNameUser) {
             if(userPassLogin === objUserLogin.getPassUser) {
-                window.location = "../index3.html";
+                window.location = "https://orangesmw1.github.io/DisplayOrangesmw/";
             } else {
                 alert("Wrong Password");
             }
