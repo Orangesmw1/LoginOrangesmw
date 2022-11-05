@@ -51,6 +51,14 @@ header {
     font-family: 'Josefin Slab', serif;
 }
 
+/* header mobile  */
+
+@media (max-width: 490px) {
+    .login-title {
+        font-size: 1rem;
+    }
+}
+
 /* section  */
 
 section {
@@ -303,6 +311,57 @@ section {
     color: rgb(244, 160, 129);
 }
 
+/* section mobile  */
+
+@media (max-width: 490px) {
+    section {
+        width: 85%;
+    }
+
+    .form-login {
+        height: 90%;
+        width: 100%;
+    }
+
+    .form-login h4 {
+        font-size: 0.9rem;
+    }
+
+    .block_user-name input, .block_user-password input {
+        width: 85%;
+    }
+
+    .block_user-name label {
+        font-size: 1.1rem;
+        top: 14px;
+    }
+
+    .block_user-name input:focus + label, .block_user-name input:valid + label{
+        font-size: 0.8rem;
+    }
+
+    .block_user-password label {
+        font-size: 1.1rem;
+        top: 14px;
+    }
+
+    .block_user-password input:focus + label, .block_user-password input:valid + label{
+        font-size: 0.8rem;
+    }
+
+    .block_user-password span {
+        right: 19%;
+    }
+
+    .block-submit button {
+        padding: 4px 50px;
+    }
+
+    .block-register a {
+        font-size: 1rem;
+    }
+}
+
 /* footer  */
 footer {
     z-index: 100;
@@ -319,6 +378,12 @@ footer h5 a {
     text-decoration: none;
     color: rgb(244, 160, 129);
 
+}
+
+@media (max-width: 490px) {
+    footer h5 {
+        font-size: 0.7rem;
+    }
 }
 
 
