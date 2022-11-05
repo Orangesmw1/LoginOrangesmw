@@ -198,6 +198,8 @@ section {
     padding-left: 20px;
     transition: all ease-in-out 0.2s;
     color: #fff;
+    font-family: 'Josefin Slab', serif;
+
 
 }
 
@@ -329,10 +331,11 @@ section {
 
     .block_user-name input, .block_user-password input {
         width: 85%;
+        font-size: 1rem;
     }
 
     .block_user-name label {
-        font-size: 1.1rem;
+        font-size: 1rem;
         top: 14px;
     }
 
@@ -341,7 +344,7 @@ section {
     }
 
     .block_user-password label {
-        font-size: 1.1rem;
+        font-size: 1rem;
         top: 14px;
     }
 
@@ -355,6 +358,7 @@ section {
 
     .block-submit button {
         padding: 4px 50px;
+        font-size: 1.2rem;
     }
 
     .block-register a {
